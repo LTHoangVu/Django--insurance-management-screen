@@ -1,1 +1,1 @@
-# Django-first-PJ
+Create an insurance user management screen
