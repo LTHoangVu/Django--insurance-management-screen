@@ -1,0 +1,167 @@
+<section class="secPersonInfo">
+    <div id="divTab">
+        <button class="btnTab">申請情報</button>
+        <button class="btnTab">所得区分判定</button>
+        <button class="btnTab">補装具情報</button>
+        <button class="btnTab">電子ファイル</button>
+    </div>
+
+    <table id="app-info-table">
+        <tbody>
+            <tr>
+                <th>対象者区分</th>
+                <td>
+                    <input class="number-input" value="{{ person.targetID }}">
+                    <span>{{ person.targetName }}</span>  
+                </td>
+                <th>起案日</th>
+                <td>
+                    <input value="{{ person.draftDate }}">
+                </td>
+                <th>起案者</th>
+                <td>
+                    <input class="number-input" value="{{ person.draftPersonID }}">
+                    <span>{{ person.draftPersonName }}</span>  
+                </td>
+                <th>管内別</th>
+                <td>
+                    <input class="number-input" value="{{ person.kannaiID }}">
+                    <span>{{ person.kannaiType }}</span>  
+                </td>
+            </tr>
+
+            <tr>
+                <th>申請事由</th>
+                <td>
+                    <input class="number-input" value="{{ person.reReasonID }}">
+                    <span>{{ person.reReasonName }}</span>
+                </td>
+                <th>申請年月日</th>
+                <td>
+                    <input value="{{ person.registerDate }}">
+                </td>
+                <th>申請者</th>
+                <td>
+                    <input class="number-input" value="{{ person.registerregisterPersonID }}">
+                    <span>{{ person.registerPersonName }}</span>
+                </td>
+                <td colspan="2"></td>
+            </tr>
+
+            <tr>
+                <th>受理日</th>
+                <td>
+                    <input value="{{ person.acceptDate }}">                        
+                </td>
+                <th>受理番号</th>
+                <td><input value="{{ person.acceptNumber }}"></td>
+                <th>決蔽日</th>
+                <td>
+                    <input value="{{ person.closingDate }}">
+                </td>
+                <th>ケース番号</th>
+                <td><input value="{{ person.caseNumber }}"></td>
+            </tr>
+
+            <tr>
+                <th>支払方式</th>
+                <td>
+                    <input class="number-input" value="{{ person.paymentID }}">
+                    <span>{{ person.paymentType }}</span></td>
+                <th>決定区分</th>
+                <td>
+                    <input class="number-input" value="{{ person.decisionID }}">
+                    <span>{{ person.decisionType }}</span></td>
+                <th>支給決定日</th>
+                <td>
+                    <input value="{{ person.paymentDate }}">
+                </td>
+                <th>支給番号</th>
+                <td>{{ person.paymentNumber }}</td>
+            </tr>
+
+            <tr>
+                <th>却下理由</th>
+                <td colspan="2">
+                    <input class="number-input" value="{{ person.rejectID }}">
+                    <span>{{ person.rejectType }}</span>
+                </td>
+                <th>その他理由</th>
+                <td colspan="4"><input value="{{ person.otherReason }}"></td>                    
+            </tr>
+
+            <tr>
+                <th>決裁用備考</th>
+                <td colspan="6">
+                    <input value="{{ person.remark }}">                    
+                </td>
+                <td class="tdEmpty-background"><button class="btnDisable">備考</button></td>                 
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="divTitle">
+        <P id='pTitle'>保護者情報</p>
+        <button class="btnFunc">国人番号表示</button>           
+    </div>
+
+    <div id="guardianDiv">
+        <table id="guardian-info-table">
+            <tbody>
+                <tr>
+                    <th colspan="2">宛名番号</th>
+                    <td><input value="{{ person.guardianID }}"></td>
+                    <th>世带番号</th>
+                    <td><input value="{{ person.familyId }}"></td>
+                    <th>生年月日.年齢.性別</th>
+                    <td><input value="R04.05.09"></td>
+                    <td  class="tdEmpty-background" colspan="2">
+                        <button class="btnFunc">保護者檢索(F)</button>
+                        <button class="btnDisable">クリア(C)</button>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th rowspan="2">氏名</th>
+                    <th>メナ</th>
+                    <td colspan="3">
+                        <input value="{{ person.gurdianKataName }}">
+                    </td>
+                    <th>職業</th>
+                    <td class="tdDataCalendar">
+                        <input class="number-input" value="{{ person.jobID }}">
+                        <span>{{ person.jobType }}</span>
+                    </td>
+                    <th>電話番号</th>
+                    <td>
+                        <input value="{{ person.gurPhoneNo }}">
+                    </td>
+                </tr>
+    
+                <tr>
+                    <th>漢字</th>
+                    <td colspan="3">
+                        <input value="{{ person.gurdianKanjiName }}">
+                    </td>
+                    <th>続柄</th>
+                    <td colspan="3" class="tdDataCalendar">
+                        <input class="number-input" value="{{ person.relationshipID }}">
+                        <span>{{ person.relationshipType }}</span>
+                    </td>                    
+                </tr>
+    
+                <tr>
+                    <th>住所</th>
+                    <th>〒住所</th>
+                    <td colspan="3">
+                        <input value="{{ person.gurPostalNo }}">
+                    </td>
+                    <td colspan="4">
+                        <input value="{{ person.gurAddress }} {{ person.gurBuildingName }}">
+                    </td>                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</section>

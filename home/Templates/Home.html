@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- CSS -->
+        <link rel="stylesheet" href="{% static  'css/home.css'%}">
+    </head>
+    <body>
+        <p id='HeaderText'>障害者福祉システム</p>
+        
+        <section>
+            <div id='MenuBox'>
+                <p>個人情報</p>
+                <a href="{% url 'secondpage'%}">自立支援【補装具情報】：台帳(新規)</a>
+            </div>
+        </section>
+    </body>
+</html>
