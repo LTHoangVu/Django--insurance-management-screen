@@ -15,8 +15,16 @@
         <h1>INVALID PERSONID</h1>
         <br />
 
-        <h2>--> Please enter a personID in the following format:</h2>
-        <p>http://127.0.0.1:8000/secondpage?personID=....</p>
+        <h2>--> Please enter a personID:</h2>
+        <input
+          type="text"
+          id="personID"
+          placeholder="Enter personID (e.g., P00001)"
+        />
+        <br /><br />
+        <a id="personLink" href="{% url 'secondpage' %}?personID="
+          >Click here to go</a
+        >
         <br />
         <br />
         <h2>
@@ -24,5 +32,7 @@
         </h2>
       </div>
     </main>
+
+    <script src="{% static 'js/input-id.js' %}"></script>
   </body>
 </html>

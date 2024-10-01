@@ -39,7 +39,7 @@
 
                 <tr>
                     <th colspan="2">生年月日</th>
-                    <td><input value="{{ person.personBD }}"></td>
+                    <td>{{ person.personBD }}</td>
                     <th>統柄</th>
                     <td>
                         <input class="cls-txt-id-number" value="{{ person.relationshipId }}">
@@ -63,33 +63,33 @@
             <tbody>
                 <tr>
                     <th colspan="2">手帳番号</th>
-                    <td colspan="12"><input value="{{ person.ticketNumber }}"></td>
+                    <td colspan="6"><input value="{{ person.ticketNumber }}"></td>
                 </tr>
 
                 <tr>
                     <th colspan="2">交付日</td>
-                    <td colspan="3"><input value="{{ person.issueDate }}"></td>
-                    <th colspan="3">ケース番号</th>
-                    <td colspan="3"><input value="{{ person.caseNumber }}"></td>
-                    <td class="cls-empty-background" colspan="3">
+                    <td colspan="2"><input value="{{ person.issueDate }}"></td>
+                    <th>ケース番号</th>
+                    <td colspan="2"><input value="{{ person.caseNumber }}"></td>
+                    <td>
                         <button class="cls-disable-button">最新取得</button>
                     </td>
                 </tr>
                 
                 <tr>
-                    <th colspan="1">CHK</th>
-                    <th colspan="2">原傷病名</th>
-                    <th colspan="6">障害部位及び程度</td>
-                    <th colspan="5">陳古区分</td>
+                    <th id="Chk">CHK</th>
+                    <th id="Injury" colspan="2">原傷病名</th>
+                    <th id="Disability" colspan="3">障害部位及び程度</b></th>
+                    <th id="Chronic" colspan="2">陳古区分</th>
                 </tr>
 
                 <tr>
-                    <td id="EmptyBox" colspan="14"></td>
+                    <td id="EmptyBox" colspan="8"></td>
                 </tr>
 
                 <tr>
                     <th colspan="2">難病情報</th>
-                    <td colspan="12"><input value="{{ person.diseaseInfo }}"></td>
+                    <td colspan="6"><input value="{{ person.diseaseInfo }}"></td>
                 </tr>
             </tbody>
         </table>
