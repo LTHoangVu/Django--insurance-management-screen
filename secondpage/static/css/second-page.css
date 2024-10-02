@@ -65,6 +65,10 @@ input {
   pointer-events: none;
 }
 
+span {
+  margin: auto 0;
+}
+
 .cls-txt-id-number {
   width: 20%;
   text-align: center;
@@ -279,4 +283,53 @@ img {
   padding: 1px 4px 4px 1px;
   background-color: white;
   pointer-events: fill;
+}
+
+/*Dropdown menu CSS*/
+ul {
+  list-style-type: none;
+}
+
+.cls-dropdown-menu-container {
+  position: relative;
+}
+
+.cls-dropdown-menu {
+  background-color: white;
+  border: 1px solid black;
+  position: absolute;
+  width: 99%;
+  display: none;
+  z-index: 99;
+}
+
+.show {
+  display: block;
+}
+
+/* .cls-dropdown-menu-container:hover .cls-dropdown-menu {
+  display: block;
+} */
+
+/* .cls-dropdown-menu-container.active .cls-dropdown-menu {
+  display: block;
+} */
+
+.cls-dropdown-menu .cls-option:hover {
+  background-color: rgb(151, 228, 255);
+}
+
+.cls-number-data {
+  border-right: 1px solid black;
+  width: 15%;
+  padding: 3px;
+}
+
+.cls-type-data {
+  padding: 3px;
+}
+
+.cls-dropdown-menu .cls-option {
+  display: flex;
+  min-height: 20px;
 }

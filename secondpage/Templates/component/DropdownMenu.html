@@ -1,0 +1,13 @@
+<div class="cls-data-container"></div>
+    <input class="cls-txt-id-number" value="{{ data_id }}">
+    <span class="cls-txt-name">{{ data_type }}</span>
+</div>
+
+<ul class="cls-dropdown-menu">
+    {% for item in menu_type %}
+    <li class="cls-option">
+        <div class="cls-number-data">{{ item.0 }}</div>
+        <div class="cls-type-data">{{ item.1 }}</div>
+    </li>  
+    {% endfor %}                          
+</ul>

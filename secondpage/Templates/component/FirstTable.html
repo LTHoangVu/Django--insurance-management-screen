@@ -41,17 +41,15 @@
                     <th colspan="2">生年月日</th>
                     <td>{{ person.personBD }}</td>
                     <th>統柄</th>
-                    <td>
-                        <input class="cls-txt-id-number" value="{{ person.relationshipId }}">
-                        <span>{{ person.relationshipType }}</span>
+                    <td class="cls-dropdown-menu-container">
+                        {% include 'component/DropdownMenu.html' with menu_type=menu_item.relationship data_id=person.relationshipId data_type=person.relationshipType %}
                     </td>
                 </tr>
 
                 <tr>
                     <th colspan="2">職業</th>
-                    <td>
-                        <input class="cls-txt-id-number" value="{{ person.jobID }}">
-                        <span>{{ person.jobType }}</span>
+                    <td class="cls-dropdown-menu-container">
+                        {% include 'component/DropdownMenu.html' with menu_type=menu_item.jobcategory data_id=person.jobID data_type=person.jobType %}
                     </td>
                     <th>電話番号</th>
                     <td><input value="{{ person.phoneNo }}"></td>
